@@ -7,7 +7,10 @@
 </div>
 
 <div>
-  <app-counter [count]='counter' [message]='"  Hello World  "' [showcountmsg]="'1'"></app-counter>
+  <app-counter [dummynamecounter]='counter' [message]='"  Hello World  "' [showcountmsg]="'1'" [title]="title"></app-counter>
 </div>
 
 
+<div>
+  <app-getter-input [title]='title'></app-getter-input>
+</div>
