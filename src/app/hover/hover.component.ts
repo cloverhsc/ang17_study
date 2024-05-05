@@ -6,10 +6,25 @@ import { RainbowDirective } from '../rainbow.directive';
   standalone: true,
   imports: [RainbowDirective],
   templateUrl: './hover.component.html',
-  styleUrl: './hover.component.scss'
+  styleUrl: './hover.component.scss',
+  host: {
+    '[class.hovered]': 'isHovered',
+    '(click)': 'onClick()',
+    '(mouseenter)': 'onMouseEnter()',
+    '(mouseleave)': 'onMouseLeave()'
+  }
 })
 export class HoverComponent {
-  @HostListener('click') onClick() {
+  isHovered = false;
+  onClick() {
     console.log('%c Clicked on HoverComponent', 'color: green')
+  }
+
+  onMouseEnter() {
+    this.isHovered = true;
+  }
+
+  onMouseLeave() {
+    this.isHovered = false;
   }
 }

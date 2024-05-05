@@ -2,7 +2,12 @@ import { Directive, HostBinding, HostListener } from '@angular/core';
 
 @Directive({
   selector: '[appRainbow]',
-  standalone: true
+  standalone: true,
+  host: {
+    '(keydown)': 'newColor()',
+    '[style.color]': 'color',
+    '[style.borderColor]': 'borderColor'
+  }
 })
 export class RainbowDirective {
 
@@ -18,9 +23,9 @@ export class RainbowDirective {
     'lightslategrey'
   ];
 
-  @HostBinding('style.color') color!: string;
-  @HostBinding('style.borderColor') borderColor!: string;
-  @HostListener('keydown') newColor() {
+  color!: string;
+  borderColor!: string;
+  newColor() {
     const colorPick = Math.floor(Math.random() * this.possibleColors.length);
     this.color = this.possibleColors[colorPick];
     this.borderColor = this.possibleColors[colorPick];
