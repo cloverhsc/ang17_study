@@ -1,3 +1,9 @@
 :host ::ng-deep .child-element {
   color: yellow
 }
+
+.dataFromChild {
+  color : #08691dea;
+  font-weight: bold;
+  background-color : #aeffbfea;
+}

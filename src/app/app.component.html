@@ -14,3 +14,13 @@
 <div>
   <app-getter-input [title]='title'></app-getter-input>
 </div>
+
+<div>
+  <app-panel (childEvent)='receiver($event)'></app-panel>
+</div>
+
+@if (dataFromChild) {
+  <div>
+    <p class='dataFromChild'> {{ dataFromChild }} </p>
+  </div>
+}
