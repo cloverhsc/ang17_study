@@ -4,11 +4,12 @@ import { ProfileComponent } from './profile.component';
 import CounterComponent from './Counter/counter.component';
 import { GetterInputComponent } from './getter-input/getter-input.component';
 import { PanelComponent } from './panel/panel.component';
+import { CardComponent } from './card/card.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ProfileComponent, CounterComponent, GetterInputComponent, PanelComponent],
+  imports: [RouterOutlet, ProfileComponent, CounterComponent, GetterInputComponent, PanelComponent, CardComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
