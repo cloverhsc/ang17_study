@@ -6,11 +6,12 @@ import { GetterInputComponent } from './getter-input/getter-input.component';
 import { PanelComponent } from './panel/panel.component';
 import { CardComponent } from './card/card.component';
 import { HoverComponent } from './hover/hover.component';
+import { LifeCycleHooksComponent } from './life-cycle-hooks/life-cycle-hooks.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ProfileComponent, CounterComponent, GetterInputComponent, PanelComponent, CardComponent, HoverComponent],
+  imports: [RouterOutlet, ProfileComponent, CounterComponent, GetterInputComponent, PanelComponent, CardComponent, HoverComponent, LifeCycleHooksComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
