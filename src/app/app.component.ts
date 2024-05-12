@@ -19,8 +19,13 @@ export class AppComponent {
   counter = 20;
   title = 'Clover Hollo World';
   dataFromChild = '';
+  toggle = true;
 
   receiver(wording: string) {
     this.dataFromChild = wording;
+  }
+
+  toggleHook() {
+    this.toggle = !this.toggle;
   }
 }
